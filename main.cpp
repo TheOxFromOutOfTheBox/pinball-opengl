@@ -18,12 +18,12 @@ void Display(){
     drawlines(p3,p2);
     drawlines(p3,p4);
     drawlines(p4,p1);
-    glBegin(GL_QUADS);
-        glVertex2i(100,100);
-        glVertex2i(100,200);
-        glVertex2i(200,200);
-        glVertex2i(200,100);
-    glEnd();
+    // glBegin(GL_QUADS);
+    //     glVertex2i(100,100);
+    //     glVertex2i(100,200);
+    //     glVertex2i(200,200);
+    //     glVertex2i(200,100);
+    // glEnd();
     glFlush();
 }
 
