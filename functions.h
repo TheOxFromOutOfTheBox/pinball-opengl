@@ -2,6 +2,9 @@
 #include "GL/freeglut.h"
 
 using namespace std;
+
+int score=0,tries_left=3;
+
 struct Point
 {
     int x, y;
@@ -156,4 +159,31 @@ void bresenhamLineDrawingAlgo(Point p1, Point p2)
             drawpixel(x, y);
         }
     }
+}
+
+
+void printTextStatic(){
+    string score_txt="SCORE : ";
+    string tries="TRIES LEFT : ";
+
+    glRasterPos2i(800,950);
+    for(int i=0;i<score_txt.size();i++){
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,(int) score_txt[i]);
+    }
+    string text_score=to_string(score);
+    for(int i=0;i<text_score.size();i++){
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,(int) text_score[i]);
+    }
+    glRasterPos2i(800,900);
+    for(int i=0;i<tries.size();i++){
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,(int) tries[i]);
+    }
+    string text_tries=to_string(tries_left);
+    for(int i=0;i<text_tries.size();i++){
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,(int) text_tries[i]);
+    }
+}
+
+void drawObjects(){
+    
 }

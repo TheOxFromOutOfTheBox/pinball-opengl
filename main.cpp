@@ -18,6 +18,7 @@ void Display(){
     drawlines(p3,p2);
     drawlines(p3,p4);
     drawlines(p4,p1);
+    printTextStatic();
     // glBegin(GL_QUADS);
     //     glVertex2i(100,100);
     //     glVertex2i(100,200);
